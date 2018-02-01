@@ -1,0 +1,26 @@
+.searcher-container {
+  width: 70%;
+  margin: auto;
+}
+
+.searcher-container .fa-refresh {
+  margin-left: -20px;
+  position: absolute;
+  line-height: 18px;
+}
+
+.searcher-container .gif {
+  display: inline-block;
+}
+
+.searcher-container mat-grid-tile {
+  cursor: pointer;
+}
+
+i.fa-chevron-circle-left {
+  color: #000;
+  font-size: 28px;
+  position: absolute;
+  margin-left: -50px;
+  margin-top: 17px;
+}

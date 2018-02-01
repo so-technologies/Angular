@@ -1,0 +1,12 @@
+.popup-container {
+  text-align: center;
+}
+
+.popup-container .row {
+  padding: 10px;
+}
+
+.row label {
+  display: block;
+  font-weight: bold;
+}

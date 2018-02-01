@@ -1,0 +1,18 @@
+<div class="popup-container">
+  <img [src]="data.image.thumbnailUrl" alt="">
+  <div class="row">
+    <label>Source URL</label>
+    <a [href]="data.image.contentUrl" target="_blank">{{data.image.contentUrl}}</a>
+  </div>
+  <div class="row">
+    <label>Name</label>
+    <span>{{data.image.name}}</span>
+  </div>
+  <div class="row">
+    <label>Published Date</label>
+    <span>{{data.image.date}}</span>
+  </div>
+  <div class="row">
+    <button mat-button (click)="close()">OK</button>
+  </div>
+</div>

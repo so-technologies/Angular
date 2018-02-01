@@ -1,0 +1,28 @@
+<div class="searcher-container">
+  <a routerLink="/">
+    <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+  </a>
+  <mat-form-field class="example-full-width">
+    <i class="fa fa-spin fa-refresh" *ngIf="loading"></i>
+    <input matInput placeholder="Type to search gifs..." (keyup)="search()" [(ngModel)]="query">
+  </mat-form-field>
+  <perfect-scrollbar
+    #scrollBar
+    [style.height.px]="containerHeight"
+    [config]="config"
+    (psYReachEnd)="scroll()">
+    <div class="result-container">
+      <div class="gif" *ngIf="gifs.length === 0">
+        <h2>No results!</h2>
+      </div>
+      <mat-grid-list cols="4">
+        <mat-grid-tile
+          *ngFor="let gif of gifs;let i = index"
+          (click)="viewGif(i)">
+          <img [src]="gif.images.fixed_height.url" alt="">
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </perfect-scrollbar>
+</div>
+

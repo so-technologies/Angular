@@ -1,0 +1,18 @@
+<div class="popup-container">
+  <img [src]="data.gif.images.fixed_height.url" alt="">
+  <div class="row">
+    <label>Source URL</label>
+    <a [href]="data.gif.url" target="_blank">{{data.gif.url}}</a>
+  </div>
+  <div class="row">
+    <label>Content Rating</label>
+    <span>{{data.gif.rating}}</span>
+  </div>
+  <div class="row">
+    <label>Import Date</label>
+    <span>{{data.gif.import_datetime}}</span>
+  </div>
+  <div class="row">
+    <button mat-button (click)="close()">OK</button>
+  </div>
+</div>

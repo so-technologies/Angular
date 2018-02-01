@@ -1,0 +1,23 @@
+<div class="popup-container">
+  <iframe width="560"
+          height="315"
+          frameborder="0"
+          allowfullscreen
+          [src]="data.video.id.videoId | youtubeSafeUrl">
+  </iframe>
+  <div class="row">
+    <label>Title</label>
+    <span>{{data.video.snippet.title}}</span>
+  </div>
+  <div class="row">
+    <label>Description</label>
+    <span>{{data.video.snippet.description}}</span>
+  </div>
+  <div class="row">
+    <label>Published At</label>
+    <span>{{data.video.date}}</span>
+  </div>
+  <div class="row">
+    <button mat-button (click)="close()">OK</button>
+  </div>
+</div>
